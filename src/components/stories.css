@@ -1,0 +1,149 @@
+.story img{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.5s;
+}
+#stories .bigStory{
+    width: 384px;
+    height: 384px;
+    border-radius: 16px;
+    position: relative;
+}
+#stories .stories{
+    position: relative;
+    justify-content: space-evenly;
+}
+.story{
+    height: 144px;
+    width:  144px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.story::before{
+    position: absolute;
+    /* left: 0;
+    top: 0; */
+    height: 100%;
+    width: 100%;
+    content: " ";
+    border-radius: 50%;
+    /* background: linear-gradient(90deg, #9688dd 0%, #88cfdd 33%, #cfdd88 66%, #dd9688 100%); */
+    background: url(../img/story.jpg);
+    animation: 120s rotate linear infinite;
+}
+#stories{
+    background-image: url("../img/banner_productos.jpg");
+    padding: 64px;
+    position: relative;
+    background-position: center;
+    margin: 32px;
+    border-radius: 16px;
+    background-size: cover;
+}
+#stories::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: " ";
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.story:hover img{
+    width: 100%;
+    height: 100%;
+    
+}
+#stories .storyText{
+    margin-top: 64px;
+    color: var(--background);
+    font-size: 1.5em;
+    position: relative;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: flex;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* padding-top: 100px; Location of the box */
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    /* transform: scale(0); */
+    /* opacity: 0; */
+    transition: 0.5s;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    transition: 0.5s;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 16px;
+    width: 400px;
+    font-size: 1.3em;
+}
+  
+@media (max-width:768px) {    
+    .story{
+        height: 72px;
+        width: 72px;
+    }
+    #stories img{
+        height: 64px;
+        width: 64px;
+    }
+     #stories{
+         padding: 32px 16px;
+     }
+     #stories .storyText{
+        font-size: 0.9em;
+    }
+    .modal-content {
+        width: 80%;
+    }
+    #stories .bigStory{
+        width: 90%;
+        aspect-ratio: 1/1;
+        height: auto;
+    }
+}
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    margin: 0 8px 8px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

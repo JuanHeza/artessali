@@ -1,0 +1,18 @@
+.QontoStepIcon-completedIcon,  .QontoStepIcon-circle{
+    background-Color: var(--primary);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.MuiStepConnector-line{
+    border-color: var(--primary) !important;
+}
+#eventos{
+    overflow-x: hidden;
+}
+#eventos .sectionTitle{
+    background-image: url(../img/banner-expose.jpg);
+}
+#eventos h6{
+    font-size: 0.8em;
+}

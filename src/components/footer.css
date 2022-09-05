@@ -1,0 +1,38 @@
+footer{
+    padding-bottom: 32px;
+    color: var(--background);
+}
+footer .redes{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    padding: 16px;
+    margin: auto;
+}
+footer .redes img{
+    height: 48px;
+    width: 48px;
+}
+.copyright{
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+.copyright img{
+    margin-left: 16px;
+    height: 24px;
+}
+@media (max-width: 768px) {
+    footer .redes{
+        width: 80%;
+    }
+    footer .redes img{
+        height: 32px;
+        width: 32px;
+    }
+    .copyright img{
+        height: 24px;
+    }
+}

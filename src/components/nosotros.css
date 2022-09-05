@@ -1,0 +1,28 @@
+#nosotros .flex{
+    justify-content: space-around;
+}
+#nosotros img{
+    aspect-ratio: 1/1;
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    margin: 1em;
+}
+#nosotros p{
+    width: 576px;
+    height: 256px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+@media (max-width:768px) {  
+    #nosotros img{
+        margin: auto;    
+        margin-bottom: 24px;
+    }
+    #nosotros p{
+        width: 258px;
+        margin: auto;
+        height: auto;
+        font-size: 1rem;
+    }
+}

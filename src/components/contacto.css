@@ -1,0 +1,115 @@
+.contactSection{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+form, .contact{
+    margin: 32px;
+    gap:32px;
+    padding: 32px 0;
+    justify-content: space-around;
+}
+
+label, input[type="reset"]{
+    width: 30%;
+    height: 32px;
+}
+
+input, textarea{
+    width: 60%;
+    min-height: 16px;
+    border-radius: 8px;
+    border: solid 1px var(--text);
+    padding: 4px 8px;
+}
+@media(max-width:768px){
+    .contactSection{
+        grid-template-columns: 100%;
+    }
+    form, .contact{
+        margin: 8px;
+        gap: 8px;
+    }
+    
+    label, input, textarea{
+        /* border: solid 1px #111; */
+        /* margin: 16px 8px 0; */
+        width: 80%;
+    }
+    input, textarea{
+        min-height: 24px;
+    }
+}
+textarea:focus-visible, input:focus-visible{
+    filter: drop-shadow(0 0 5px var(--primary-tint));
+    outline: none;
+}
+h3{
+    margin-top: 0;
+    width: 100%;
+}
+.contact img{
+    background-color: var(--primary);
+    border-radius: 50%;
+    height: 48px;
+    border: solid 1px var(--primary);
+}
+.gallery{
+    margin: 16px;
+    justify-content: space-evenly;
+    row-gap: 16px;
+}
+.gallery .pictureBox{
+    height: 224px;
+    width: 224px;
+    border: 1px solid var(--primary-tint);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    z-index: 0;
+}
+.pictureBox::before{
+    position: absolute;
+    content: " ";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #fff0 20%, #fff 30%, #fff 70%, #fff0 80%);
+    background-size: 450%;
+    z-index: 2;
+    animation: shade 10s linear infinite alternate forwards;
+}
+.pictureBox .picture {
+    width: 200%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    animation: left 10s linear infinite alternate forwards;
+}
+.pictureBox .picture, 
+.pictureBox::before{
+    animation-duration: 5s;
+}
+.pictureBox:nth-child(2n) .picture, 
+.pictureBox:nth-child(2n):before{
+    /* animation-delay: 5s; */
+    animation-direction: alternate-reverse;
+}
+.pictureBox .picture img{
+    aspect-ratio: 1/1;
+    height: 100%;
+    z-index: 1;
+}
+
+@keyframes shade {
+    from{   background-position: 0%;    }
+    40%{   background-position: 0%;    }
+    60%{ background-position: 100%;  }
+    to{ background-position: 100%;  }
+}
+ @keyframes left {
+    from{   left: 0px;  }
+    40%{left: 0px;}
+    60%{left: -100%;}
+    to{ left: -100%;   }
+}

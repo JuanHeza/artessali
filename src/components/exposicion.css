@@ -1,0 +1,88 @@
+#exposicion{
+    justify-content: space-evenly;
+}
+#exposicion .sectionBanner{
+    height: 400px;
+    width: 100%;
+    background-image: url("../img/cuarzos.jpg");
+    background-size: cover ;
+    border-radius: 8px;
+    position: relative;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#exposicion .sectionBanner::before {
+    content: " ";
+    border-radius: 8px;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #0008;
+}
+.exposeProduct{
+    width: 160px;
+    margin: 20px 40px;
+    padding: 16px;
+    text-transform: capitalize;
+    border: solid 2px var(--primary-tint);
+    border-radius: 16px;
+}
+.exposeWindow {
+    overflow: hidden;
+    height: 128px;
+    display: flex;
+    width: 128px;
+    border-radius: 50%;
+    border: solid 1px var(--primary);
+    justify-content: center;
+    align-items: center;
+}
+.exposeProduct:hover .exposeImage,
+.exposeProduct:active .exposeImage{
+    transform: scale(0.9);
+}
+.exposeImage{
+    height: 144px;
+    transform: scale(1.2);
+    width: 144px;
+    transition: 0.5s;
+}
+.exposeText{
+    width: 100%;
+}
+.exposeList{
+    padding: 0;
+}
+#exposicion .intro{
+    padding: 32px;
+    margin: 16px;
+    font-size: 2em;
+    position: relative;
+    color: var(--background);
+}
+@media (max-width:768px) {    
+    #exposicion .intro{
+        font-size: 1.2em;
+    }
+    .exposeProduct{
+        width: 96px;
+        margin: 24px 0;
+    }
+    .exposeWindow {
+        width: 64px;
+        height: 64px;
+    }
+    .exposeImage{
+        width: 80px;
+        height: 80px;
+    }
+    .exposeText{
+        font-size: 0.7em;
+        width: 100%;
+    }
+}

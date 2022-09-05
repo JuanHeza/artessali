@@ -1,0 +1,119 @@
+#productos .sectionTitle{
+    background-image: url(../img/banner_productos.jpg);
+    margin: 32px;
+    width: auto;
+    padding: 32px;
+}
+.productRow .title{
+    text-transform: capitalize;
+    font-size: 2em;
+    width: 100%;
+}
+.productRow .productScroll{
+    width: 100%;
+    margin: 16px auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-items: center;
+}
+
+.productCard{
+    padding: 16px;
+    margin: 16px 8px;
+    width: 240px;
+    border-radius: 16px;
+    box-shadow: 0 0 2px var(--text);
+    transition: 0.5s;
+}
+.productCard:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 4px var(--text);
+}
+.productCard .productImage{
+    width: 93%;
+    aspect-ratio: 1/1;
+    position: relative;
+    border-radius: 8px;
+    margin: auto;
+}
+.productImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px var(--primary);
+}
+/* .productImage .badge{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 80px;
+    height: 32px;
+    border-radius: 16px;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    color: var(--background);
+    text-align: center;
+} */
+/* .badge.disponible{ background-color: var(--primary);} */
+/* .badge.agotado{ background-color: var(--text);} */
+.productCard .productName{
+    font-weight: 700;
+    text-align: left;
+    height: 48px;
+    margin: 16px 8px 8px;
+}
+.productCard .productPrice{
+    margin: 8px 8px;
+    font-weight: 500;
+    height: 128px;
+    text-align: left;
+    font-size: 0.8em;
+}
+.productView{
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: var(--background);
+    border: 1px solid var(--text);
+    overflow: hidden;
+}
+.productOptions{
+    display: grid;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    justify-content: center;
+    justify-items: center;
+}
+.productView img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    transform: scale(2.5);
+}
+@media (max-width: 768px){
+    .productRow{
+        padding: 8px;
+    }
+    .productRow .productScroll{
+        grid-template-columns: 50% 50%;
+    }
+    .productCard{
+        width: 70%;
+        font-size: 10px;
+        padding: 16px 8px;
+    }
+    .productCard .productName, .productCard .productPrice{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .productCard .productName{
+        height: 48px;
+    } 
+    .productCard .productPrice{
+        height: 112px;
+    }
+    .productOptions{
+        grid-template-columns: 33% 33% 33%;
+        row-gap: 8px;
+    }
+
+}
