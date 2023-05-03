@@ -16,8 +16,8 @@ export class Footer extends React.Component{
               <div className="col-md-12 LWD-col"> 
                 <span className="copyright">
                     Copyright &copy; 2021. Developed by 
-                    <a target="_blanck" rel="noreferrer" href="https://www.lemonwebdesign.mx/">
-                        <img id="LWD" src="img/lemonwebdesing_icono4.png" alt="Lemon Web Design" />
+                    <a>
+                        Evil Panda
                     </a>
                 </span> 
               </div>
