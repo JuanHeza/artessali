@@ -1,5 +1,13 @@
 # Getting Started with Create React App
 
+https://developers.tiktok.com/doc/display-api-get-started/
+
+https://www.cassie.codes/posts/creating-my-logo-animation/
+
+https://dev.to/joserfelix/page-transitions-in-react-1c8g
+
+desarrollo.artessali.com
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
